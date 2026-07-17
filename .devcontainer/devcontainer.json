@@ -1,0 +1,32 @@
+{
+  "name": "Zig Game Boy Emulator",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "ZIG_VERSION": "0.16.0"
+    }
+  },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ziglang.vscode-zig",
+        "vadimcn.vscode-lldb"
+      ],
+      "settings": {
+        "zig.path": "/usr/local/bin/zig",
+        "zig.zls.enabled": "on",
+        "[zig]": {
+          "editor.defaultFormatter": "ziglang.vscode-zig",
+          "editor.formatOnSave": true
+        },
+        "editor.formatOnSave": true,
+        "files.exclude": {
+          "**/.zig-cache": true,
+          "**/zig-out": true
+        }
+      }
+    }
+  },
+  "postCreateCommand": "zig version"
+}
