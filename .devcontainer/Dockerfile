@@ -7,6 +7,7 @@ RUN apt-get update \
         ca-certificates \
         curl \
         git \
+        git-lfs \
         jq \
         xz-utils \
         gdb \
