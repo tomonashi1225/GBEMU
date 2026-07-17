@@ -1,0 +1,19 @@
+# Zig
+.zig-cache/
+zig-out/
+
+# ROM files
+*.gb
+*.gbc
+*.sav
+
+roms/*
+!roms/.gitkeep
+
+# Generated traces and dumps
+traces/
+dumps/
+screenshots/
+
+# Editor
+.vscode/*.local.json
